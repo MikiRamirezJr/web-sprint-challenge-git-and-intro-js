@@ -350,9 +350,11 @@ Use artistByCountry to do the following:
 🌟 EXAMPLE: Invoking artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya']
 */
 
-function artistByCountry(/*Your Code Here*/){
-  /*Your Code Here*/
-}
+const artistByCountry = (artists, nationality) => {
+  const filteredArtists = artists.filter(artist => artist.nationality === nationality);
+  return filteredArtists.map(filteredArtist => filteredArtist.name);
+};
+console.log(artistByCountry(artists, 'Spanish'));
 
 
 
